@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Dashboard</title>
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/dashboard.css">
+	<link rel="stylesheet" href="fa/css/all.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand navbar-dark bg-primary">
+
+	  <a class="sidebar-toggle text-light mr-3">
+	  	<span class="navbar-toggler-icon"></span>
+	  </a>
+	  <a class="navbar-brand" href="index.html">Celke</a>
+
+	  <div class="collapse navbar-collapse">
+	    <ul class="navbar-nav ml-auto">
+	      <li class="nav-item dropdown">
+
+	        <a class="nav-link dropdown-toggle menu-header" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+				<img src="img/icon.png" width="20" height="20" class="rounded-circle mr-1"> 
+	          <span class="d-none d-md-inline"> Usuario</span>
+	        </a>
+	        <div class="dropdown-menu dropdown-menu-right">
+	          <a class="dropdown-item" href="#"><i class="fas fa-user"></i> Sair Perfil</a>
+	          <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt"></i> Sair</a>
+	        </div>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<div class="d-flex">
+		<nav class="sidebar">
+			<ul class="list-unstyled">
+				<li><a href=""><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+				<li>
+					<a href="#submenu1" data-toggle="collapse">
+						<i class="fas fa-user "></i> Usuarios
+					</a>
+					<ul class="collapse pl-0" id="submenu1">
+						<li><a href="listar.html"><i class="fas fa-users"></i> Usuarios</a></li>
+						<li><a href="#"><i class="fas fa-key"></i> Niveis De Acesso</a></li>
+					</ul>	
+				</li>
+				<li>
+					<a href="#submenu2" data-toggle="collapse">
+						<i class="fas fa-list-ul"></i> Menu
+					</a>
+					<ul class="collapse pl-0" id="submenu2">
+						<li><a href="#"><i class="fas fa-file-alt"></i> Paginas</a></li>
+						<li><a href="#"><i class="fab fa-elementor"></i> Item De Menu</a></li>
+					</ul>
+				</li>
+				<li><a href="">Item 1</a></li>
+				<li><a href="">Item 2</a></li>
+				<li><a href="">Item 3</a></li>
+				<li class="active"><a href="">Item 4</a></li>
+				<li><a href=""><i class="fas fa-sign-out-alt"></i> Sair</a></li>
+			</ul>
+		</nav>
+
+		<div class="content p-1 w-100">
+			<div class="list-group-item">
+				<div class="d-flex">
+					<div class="mr-auto p-2">
+						<h2 class="display-4 titulo">Editar Usúario</h2>
+					</div>
+					<div class="p-2">
+						<span class="d-none d-md-block">
+				    			<a href="visualizar.html" class="btn btn-outline-primary btn-sm">Vizualizar</a>
+				    			<a href="editar.html" class="btn btn-outline-warning btn-sm">Editar</a>
+				    			<a href="#apagarRegistro" data-toggle="modal" class="btn btn-outline-danger btn-sm">Apagar</a>
+				    		</span>
+				    		<div class="dropdown d-block d-md-none">
+							  <button class="btn btn-primary dropdown-toggle btn-sm" data-toggle="dropdown">
+							    Ações
+							  </button>
+							  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+							  	<a class="dropdown-item" href="listar.html">Listar</a>
+							    <a class="dropdown-item" href="visualizar.html">Vizualizar</a>
+							    <a class="dropdown-item" href="#apagarRegistro" data-toggle="modal">Apagar</a>
+							  </div>
+							</div>
+					</div>
+				</div>
+				<hr>
+				<form>
+				  <div class="form-row">
+				    <div class="form-group col-md-6">
+				      <label for="nome"><span class="text-danger">*</span> Nome</label>
+				      <input type="email" required name="nome" class="form-control" id="nome" placeholder="Digite Seu Nome">
+				    </div>
+				    <div class="form-group col-md-6">
+				      <label for="email"><span class="text-danger">*</span> E-mail</label>
+				      <input type="email" required name="email" class="form-control" id="email" placeholder="Digite Seu Email">
+				    </div>
+				  </div>
+
+				  <div class="form-row">
+				    <div class="form-group col-md-6">
+				      <label for="senha"><span class="text-danger">*</span> Senha</label>
+				      <input type="password" required name="senha" class="form-control" id="senha" placeholder="Digite Sua Senha Com Minimo 6 Caracteres">
+				    </div>
+				    <div class="form-group col-md-6">
+				      <label for="senha-confirm">Confirmar Senha</label>
+				      <input type="password" required name="senha_confirm" class="form-control" id="senha-confirm" placeholder="Confirme Sua Senha">
+				    </div>
+				  </div>
+
+				  <div class="form-row">
+				    <div class="form-group col-md-6">
+				      <label for="endereco"><span class="text-danger">*</span> Endereço</label>
+				      <input type="text" required name="endereco" placeholder="Rua: Aleatoria" class="form-control" id="endereco">
+				    </div>
+				    <div class="form-group col-md-2">
+				      <label for="numero"><span class="text-danger">*</span> Número</label>
+				      <input type="text" required name="endereco" placeholder="Num: ..." class="form-control" id="numero">
+				    </div>
+				    <div class="form-group col-md-4">
+				      <label for="complemento">Complemento</label>
+				      <input type="text" name="complemento" placeholder="Sala, Apartamento" class="form-control" id="complemento">
+				    </div>
+				  </div>
+
+				  <div class="form-row">
+				    <div class="form-group col-md-5">
+				      <label for="cidade"><span class="text-danger">*</span> Cidade</label>
+				      <input type="text" name="cidade" placeholder="Rua: Aleatoria" class="form-control" id="cidade">
+				    </div>
+				    <div class="form-group col-md-5">
+				      <label for="estado"><span class="text-danger">*</span> Estado</label>
+				      <select name="estado" id="estado" class="form-control">
+				      		<option selected>Selecione Seu Estado</option>
+				      </select>
+				    </div>
+				    <div class="form-group col-md-2">
+				      <label for="cep"><span class="text-danger">*</span> CEP</label>
+				      <input type="text" name="cep" placeholder="12345-78" class="form-control" id="cep">
+				    </div>
+				  </div>
+				  <button type="submit" class="btn btn-warning">Salvar</button>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="apagarRegistro">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header bg-danger text-white">
+	        <h5 class="modal-title ">Excluir Registro</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+
+	      <div class="modal-body">
+	        <p class="modal-title">Tem certeza que deseja excluir o item selecionado?</p>
+	      </div>
+
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+	        <button type="button" class="btn btn-danger">Apagar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<script src="js/jquery-3.4.1.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/dashboard.js"></script>
+</body>
+</html>
